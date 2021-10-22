@@ -76,7 +76,7 @@ async function render(url) {
     }
     response.data.forEach((item) => {
       list.append(`<div class="card" style="width: 18rem;">
-                <img style="width: 100%; object-fit: contain; height:250px" src='${
+                <img style="width: 100%; object-fit: contain; height:250px; object-fit: cover" src='${
                   item.img
                 }' class="card-img-top" alt="...">
                 <div class ="card-body">
