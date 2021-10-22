@@ -24,3 +24,15 @@
 .prev {
     width: 100px;
 }
+
+.nav-item {
+    padding-left: 10px;
+}
+
+.greetings {
+    font-size: 25px;
+}
+
+.navbar-brand {
+    font-size: 25px;
+}

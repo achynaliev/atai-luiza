@@ -6,31 +6,95 @@
       "kpi": "10000000000000",
       "desc": "Best, Honest, Handsome, Brave",
       "img": "https://media.novinky.cz/366/303661-original1-zsqie.jpg",
+      "id": 1
+    },
+    {
+      "lastname": "Uson",
+      "firstname": "Asanov",
+      "kpi": "90",
+      "desc": "Honest, Handsome, Brave",
+      "img": "https://oir.mobi/uploads/posts/2019-12/1576374103_18-22.jpg",
+      "id": 2
+    },
+    {
+      "lastname": "Belekov",
+      "firstname": "Urmat",
+      "kpi": "78",
+      "desc": "Honest, Creative, Brave",
+      "img": "http://img.crazys.info/files/i/2012.5.22/1337628846_9a6cf2c961e5.jpg",
+      "id": 3
+    },
+    {
+      "lastname": "Namazov",
+      "firstname": "Turat",
+      "kpi": "85",
+      "desc": "Best, Honest, Creative, Brave",
+      "img": "https://img-fotki.yandex.ru/get/66659/58581001.310/0_f39dc_3380b589_orig.jpg",
+      "id": 4
+    },
+    {
+      "lastname": "Petrova",
+      "firstname": "Anya",
+      "kpi": "75",
+      "desc": "Hardworking, Honest, Creative",
+      "img": "https://ae01.alicdn.com/kf/HTB1LJ5SXhv1gK0jSZFFq6z0sXXaK/5D.jpg_q50.jpg",
+      "id": 6
+    },
+    {
+      "lastname": "Ivanov",
+      "firstname": "Vanya",
+      "kpi": "78",
+      "desc": "Hardworking, Honest, Creative, Brave",
+      "img": "https://ae01.alicdn.com/kf/HTB1LJ5SXhv1gK0jSZFFq6z0sXXaK/5D.jpg_q50.jpg",
       "id": 7
     },
     {
-      "lastname": "Atai",
-      "firstname": "Chynaliev",
-      "kpi": "10000000000000",
-      "desc": "Best, Honest, Handsome, Brave",
-      "img": "https://media.novinky.cz/366/303661-original1-zsqie.jpg",
+      "lastname": "Pak",
+      "firstname": "Sasha",
+      "kpi": "91",
+      "desc": "Hardworking, Honest, Creative, Brave",
+      "img": "https://oir.mobi/uploads/posts/2021-05/thumbs/1619937705_46-oir_mobi-p-malenkii-lvenok-zhivotnie-krasivo-foto-46.jpg",
       "id": 8
     },
     {
-      "lastname": "Atai",
-      "firstname": "Chynaliev",
-      "kpi": "10000000000000",
-      "desc": "Best, Honest, Handsome, Brave",
-      "img": "https://media.novinky.cz/366/303661-original1-zsqie.jpg",
+      "lastname": "Kim",
+      "firstname": "Dana",
+      "kpi": "94",
+      "desc": "Hardworking, Honest, Creative, Brave",
+      "img": "https://yt3.ggpht.com/ytc/AKedOLQLbpAS1FbmGPi9ebDGmFEqKfIjXih6UX62-e4tJw=s900-c-k-c0x00ffffff-no-rj",
       "id": 9
     },
     {
-      "lastname": "Atai",
-      "firstname": "Chynaliev",
-      "kpi": "10000000000000",
-      "desc": "Best, Honest, Handsome, Brave",
-      "img": "https://media.novinky.cz/366/303661-original1-zsqie.jpg",
+      "lastname": "Li",
+      "firstname": "Sui",
+      "kpi": "81",
+      "desc": "Hardworking, Honest, Creative, Brave",
+      "img": "https://i.pinimg.com/736x/cd/78/e2/cd78e238ef49ca559c27afde58d59c93--squirrel-illustration-cute-fox.jpg",
       "id": 10
+    },
+    {
+      "lastname": "Wei",
+      "firstname": "Lola",
+      "kpi": "71",
+      "desc": "Hardworking, Honest, Creative, Brave",
+      "img": "https://ae01.alicdn.com/kf/HTB1LJ5SXhv1gK0jSZFFq6z0sXXaK/5D.jpg_q50.jpg",
+      "id": 11
+    },
+    {
+      "lastname": "Son",
+      "firstname": "Katya",
+      "kpi": "94",
+      "desc": "Hardworking, Honest, Creative, Brave",
+      "img": "https://img2.freepng.ru/20180305/bbe/kisspng-ant-insect-cartoon-clip-art-ants-vector-material-5a9d1a97a90945.5139051915202453996924.jpg",
+      "id": 12
+    },
+    {
+      "lastname": "Beshbarmakov",
+      "firstname": "Bokmurun",
+      "kpi": "93",
+      "desc": "Hardworking, Honest, Creative, Brave",
+      "img": "https://i.pinimg.com/736x/53/68/29/536829cd4ef9ca0ab8bb80fddd09ad07.jpg",
+      "id": 13
     }
   ]
 }

@@ -10,6 +10,33 @@ let addImg = $('#addImg')
 let modal = $('.modal')
 let next = $('.next')
 let prev = $('.prev')
+let greetins = $('.greetings')
+let whichUser = $('.whichUser')
+let bestStud = $('.bestStud')
+$('.addStud').prop("disabled", true);
+
+
+function changeUser() {
+    if (whichUser.attr('id') === 'user') {
+        greetins.text('Hello: Admin')
+        whichUser.text('Login as user')
+        whichUser.attr('id', 'admin')
+        $('.edit-btn').prop("disabled", false);
+        $('.delete-btn').prop("disabled", false);
+        $('.addStud').prop("disabled", false);
+    } else {
+        greetins.text('Hello: Atai')
+        whichUser.text('Login as admin')
+        whichUser.attr('id', 'user')
+        $('.edit-btn').prop("disabled", true);
+        $('.delete-btn').prop("disabled", true);
+        $('.addStud').prop("disabled", true);
+    }
+}
+
+$('.whichUser').on('click', changeUser)
+
+
 
 let btnSaveChanges = $('.btn-save-changes')
 btnSaveChanges.on("click", (e) => {
@@ -44,6 +71,12 @@ async function render(url) {
         console.log(response.data)
         let list = $('.list')
         list.html('')
+        let disabled;
+        if (whichUser.attr('id') === 'user') {
+            disabled = true
+        } else {
+            disabled = false
+        }
         response.data.forEach((item) => {
             list.append(`<div class="card" style="width: 18rem;">
                 <img style="width: 100%; object-fit: contain; height:250px" src='${item.img}' class="card-img-top" alt="...">
@@ -52,11 +85,11 @@ async function render(url) {
                 <p class ="card-text">Firstname: ${item.firstname}</p>
                 <p class ="card-text">KPI: ${item.kpi}</p>
                 <p class ="card-text">description: ${item.desc}</p>
-                 <button id="${item.id}"type="button" class="btn btn-info edit-btn" data-bs-toggle="modal"
+                 <button id="${item.id}"type="button" ${disabled ? 'disabled' : null} class="btn btn-info edit-btn" data-bs-toggle="modal"
                             data-bs-target="#editModal">
                             Edit student
                         </button>
-                    <button id="${item.id}" type="button" class="btn btn-danger delete-btn">Delete student</button>
+                    <button id="${item.id}" type="button" class="btn btn-danger delete-btn" ${disabled ? 'disabled' : null}>Delete student</button>
                 </div>
             </div>`)
         })
@@ -132,8 +165,6 @@ let editStud = $('.edit-stud')
 $(document).on("click", ".edit-btn", async (e) => {
     let id = e.target.id
     editStud.attr("id", id)
-
-
     try {
         let result = await axios.get(APIs + id)
         editLastName.val(result.data.firstname)
@@ -141,13 +172,9 @@ $(document).on("click", ".edit-btn", async (e) => {
         editKpi.val(result.data.kpi)
         editDesc.val(result.data.desc)
         editImg.val(result.data.img)
-
-
-
     } catch (e) {
 
     }
-
 })
 
 $(document).on("click", ".edit-stud", async (e) => {
@@ -167,10 +194,6 @@ $(document).on("click", ".edit-stud", async (e) => {
 
     try {
         let result = await axios.put(APIs + id, student)
-
-
-
-
     } catch (e) {
 
     }
@@ -194,3 +217,64 @@ $(document).on("click", ".delete-btn", async (e) => {
 
     render("http://localhost:8000/students?_page=" + currentPage + "&_limit=6");
 })
+
+bestStud.on("click", async function (e) {
+    let id = bestStud.attr('id')
+    if (id === 'user') {
+        let result = await axios.get(APIs)
+        let best = [
+
+        ]
+
+        result.data.forEach((item, index) => {
+            if (index === 0 || index === 1 || index === 2) {
+                best.push(item)
+            } else {
+                if (best[0].kpi < item.kpi) {
+                    best[0] = item
+                }
+            }
+            best.sort((a, b) => (a.kpi - b.kpi))
+        })
+
+        renderBest(best)
+        bestStud.attr('id', 'allUsers')
+    } else {
+        render(APIs)
+        bestStud.attr('id', 'user')
+        bestStud.text("Show best students")
+        currentPage = 1;
+    }
+})
+
+function renderBest(best) {
+    let list = $('.list')
+    list.html('')
+    best = best.reverse()
+    let disabled;
+    if (whichUser.attr('id') === 'user') {
+        disabled = true
+    } else {
+        disabled = false
+    }
+    best.forEach((item, index) => {
+        list.append(`<div class="card" style="width: 18rem;">
+        <p class ="card-text bests" style="width: 100%; font-size: 30px; text-align: center; font-weight: bold; padding-top: 10px;">#${index + 1}</p>
+                <img style="width: 100%; object-fit: contain; height:250px" src='${item.img}' class="card-img-top" alt="...">
+                <div class ="card-body">
+                <p class ="card-text">Lastname: ${item.lastname}</p>
+                <p class ="card-text">Firstname: ${item.firstname}</p>
+                <p class ="card-text">KPI: ${item.kpi}</p>
+                <p class ="card-text">description: ${item.desc}</p>
+                 <button id="${item.id}"type="button" ${disabled ? 'disabled' : null} class="btn btn-info edit-btn" data-bs-toggle="modal"
+                            data-bs-target="#editModal">
+                            Edit student
+                        </button>
+                    <button id="${item.id}" type="button" class="btn btn-danger delete-btn" ${disabled ? 'disabled' : null}>Delete student</button>
+                </div>
+            </div>`)
+    })
+
+    bestStud.text("Show all students")
+}
+
