@@ -1,0 +1,36 @@
+{
+  "students": [
+    {
+      "lastname": "Atai",
+      "firstname": "Chynaliev",
+      "kpi": "10000000000000",
+      "desc": "Best, Honest, Handsome, Brave",
+      "img": "https://media.novinky.cz/366/303661-original1-zsqie.jpg",
+      "id": 7
+    },
+    {
+      "lastname": "Atai",
+      "firstname": "Chynaliev",
+      "kpi": "10000000000000",
+      "desc": "Best, Honest, Handsome, Brave",
+      "img": "https://media.novinky.cz/366/303661-original1-zsqie.jpg",
+      "id": 8
+    },
+    {
+      "lastname": "Atai",
+      "firstname": "Chynaliev",
+      "kpi": "10000000000000",
+      "desc": "Best, Honest, Handsome, Brave",
+      "img": "https://media.novinky.cz/366/303661-original1-zsqie.jpg",
+      "id": 9
+    },
+    {
+      "lastname": "Atai",
+      "firstname": "Chynaliev",
+      "kpi": "10000000000000",
+      "desc": "Best, Honest, Handsome, Brave",
+      "img": "https://media.novinky.cz/366/303661-original1-zsqie.jpg",
+      "id": 10
+    }
+  ]
+}
