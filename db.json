@@ -95,6 +95,22 @@
       "desc": "Hardworking, Honest, Creative, Brave",
       "img": "https://i.pinimg.com/736x/53/68/29/536829cd4ef9ca0ab8bb80fddd09ad07.jpg",
       "id": 13
+    },
+    {
+      "lastname": "Mantybekov",
+      "firstname": "Mantybek",
+      "kpi": "999",
+      "desc": "great student, 3rd best",
+      "img": "https://ae01.alicdn.com/kf/HTB1LJ5SXhv1gK0jSZFFq6z0sXXaK/5D.jpg_q50.jpg",
+      "id": 14
+    },
+    {
+      "lastname": "Jyldyzova",
+      "firstname": "Luiza",
+      "kpi": "999999",
+      "desc": "great student, 2nd best, Sexy",
+      "img": "https://s1.1zoom.ru/b4354/89/Dogs_Bulldog_Sleep_Book_Glasses_Snout_White_523213_1600x1200.jpg",
+      "id": 14
     }
   ]
 }
